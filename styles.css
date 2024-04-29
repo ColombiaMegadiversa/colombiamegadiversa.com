@@ -1,0 +1,392 @@
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Evita el desplazamiento horizontal */
+}
+
+/* Estilos del Menú */
+header {
+  background-color: rgba(170, 230, 162, 0); /* Fondo transparente con sombra */
+  color: white;
+  padding: 20px;
+  position: fixed;
+  width: 100%;
+  z-index: 1; /* Asegura que esté por encima del contenido */
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Estilos específicos para las secciones */
+section {
+  width: 100vw; /* Ancho completo de la ventana */
+  height: 100vh; /* Alto completo de la ventana */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50px; /* Ajuste para el espacio en blanco debajo de las secciones */
+  scroll-snap-align: start; /* Alineación al inicio del contenedor de desplazamiento */
+}
+
+/* Estilo para los slides */
+#slide-container {
+  display: flex;
+  width: 500%; /* Ancho total de todos los slides */
+  transition: transform 0.5s ease; /* Transición para desplazamiento */
+}
+
+.slide {
+  flex: 1;
+  background-image: url('fondomega.png');
+  
+}
+
+
+#portada {
+  background-image: url('fondo.jpg'); /* Reemplaza 'ruta/de/la/imagen.jpg' con la ruta de tu imagen */
+  background-size: contain;
+  background-position: center;
+  background-attachment: fixed;
+
+}
+
+
+.portada-right {
+  color: #ffffff;
+  margin: 250px;
+  font-size: 40px;
+  font-family: 'Lora', serif;
+  font-size: 40px; /* Tamaño grande para mantener la atención */
+  font-weight: 700; /* Peso de la fuente para destacar el título */
+  font-style: italic; /* Cursiva ligera para mantener la fluidez */
+  color: #dfdbd2; /* Un color verde oscuro para un toque natural */
+}
+
+
+
+/* Estilos de los botones laterales */
+#prevBtn, #nextBtn {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.2);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 16px;
+  z-index: 2; /* Asegura que estén por encima de las secciones */
+}
+
+#prevBtn {
+  left: 0;
+}
+
+#nextBtn {
+  right: 0;
+}
+
+
+/* estilos sección integrantes*/
+
+/* Estilos para la tarjeta del perfil del integrante */
+.integrante-card {
+  display: flex;
+  width: 80%;
+  margin-top: 50px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #236e29b9;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-picture {
+  width: 30%;
+  height: 200px;
+  background-image: url('fotointegrante1.png');
+  position: center;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.profile-details {
+  width: 70%;
+}
+
+.profile-details h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.profile-details p {
+  font-size: 1rem;
+  color: #f7eded;
+}
+
+.line {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  color: #ffffff;
+}
+
+.line:before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: #e6d6d6;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.card {
+  width: 80%;
+  max-width: 400px; /* Ancho máximo del card */
+  background-color: #ffffff; /* Color de fondo del card */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.356); /* Sombra suave */
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.profile-picture {
+  width: 100px; /* Ancho de la imagen de perfil */
+  height: 100px; /* Alto de la imagen de perfil */
+  border-radius: 50%; /* Hace que la imagen sea circular */
+  margin-right: 20px; /* Espacio entre la imagen de perfil y el texto */
+}
+
+
+
+.profile-details {
+  flex: 1; /* Ocupa todo el espacio disponible */
+}
+
+.profile-name {
+  font-size: 1.2rem; /* Tamaño del texto del nombre */
+  font-weight: bold; /* Texto en negrita */
+  margin-bottom: 5px; /* Espacio entre el nombre y la profesión */
+}
+
+.profile-profession {
+  font-size: 1rem; /* Tamaño del texto de la profesión */
+  color: #dff5e1; /* Color del texto secundario */
+  margin-bottom: 10px; /* Espacio entre la profesión y los detalles */
+}
+
+.profile-detail {
+  display: flex; /* Distribuye los detalles en línea */
+  align-items: center; /* Alinea los detalles verticalmente */
+  margin-bottom: 5px; /* Espacio entre cada detalle */
+}
+
+.profile-detail i {
+  margin-right: 10px; /* Espacio entre el icono y el texto */
+  color: #666666; /* Color del icono */
+}
+
+.profile-detail span {
+  color: #dfecd9; /* Color del texto */
+}
+
+
+.integrante-card {
+  width: 80%;
+  margin: 100px; /* Esto centrará el card horizontalmente y agregará espacio en la parte superior */
+  margin-top: 150px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #7b8b1cde;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* fondo contacto*/
+
+#integrantes {
+  background-image: url('fondointegrantes.jpg'); /* Reemplaza 'ruta/de/la/imagen.jpg' con la ruta de tu imagen */
+  background-size: cover; /* Ajusta la imagen para cubrir toda la sección */
+  background-position: center; /* Centra la imagen en la sección */
+  background-attachment: fixed; /* Fija la imagen para que no se desplace con el contenido */
+}
+
+#servicios {
+  background-image: url('fondoservicios.jpg'); /* Reemplaza 'ruta/de/la/imagen.jpg' con la ruta de tu imagen */
+  background-size: cover; /* Ajusta la imagen para cubrir toda la sección */
+  background-position: center; /* Centra la imagen en la sección */
+  background-attachment: fixed; /* Fija la imagen para que no se desplace con el contenido */
+}
+#contacto {
+  background-image: url('fondocontacto.jpg'); /* Reemplaza 'ruta/de/la/imagen.jpg' con la ruta de tu imagen */
+  background-size: cover; /* Ajusta la imagen para cubrir toda la sección */
+  background-position: center; /* Centra la imagen en la sección */
+  background-attachment: fixed; /* Fija la imagen para que no se desplace con el contenido */
+}
+#proyectos {
+  background-image: url('fondoproyecto.jpg'); /* Reemplaza 'ruta/de/la/imagen.jpg' con la ruta de tu imagen */
+  background-size: cover; /* Ajusta la imagen para cubrir toda la sección */
+  background-position: center; /* Centra la imagen en la sección */
+  background-attachment: fixed; /* Fija la imagen para que no se desplace con el contenido */
+}
+
+.slide {
+  opacity: 0; /* Todos los slides son inicialmente transparentes */
+  position: absolute;
+  top: 0;
+  width: 100%;
+  transition: opacity 0.5s ease; /* Transición suave de la opacidad */
+}
+
+#slide-container {
+  position: relative;
+  height: 100vh; /* Altura fija para el contenedor de slides */
+  overflow: hidden; /* Esconde cualquier parte de los slides que desborde */
+}
+
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Evita el desplazamiento horizontal */
+  background-color: #f4f4f4; /* Fondo claro para el cuerpo */
+}
+
+/* Estilos del Menú */
+header {
+  background-color: rgba(154, 156, 54, 0); /* Fondo transparente verde claro */
+  color: white;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100; /* Asegura que esté por encima del contenido */
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+/* Estilos para centrar los slides y cards */
+#slide-container {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 60px); /* Altura ajustada para no superponer el header */
+  display: flex;
+  align-items: center; /* Centrado vertical de los slides */
+  justify-content: center; /* Centrado horizontal de los slides */
+  overflow: hidden;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center; /* Centra el contenido horizontalmente dentro del slide */
+  align-items: center; /* Centra el contenido verticalmente dentro del slide */
+}
+
+.integrante-card {
+  display: flex;
+  width: 80%;
+  max-width: 960px; /* Limita el ancho máximo de los cards */
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #316606af; /* Verde claro semi-transparente */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease; /* Transición suave para el hover */
+}
+
+/* Ajuste para los botones de navegación, evitando superposición con el contenido */
+#prevBtn, #nextBtn {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 101; /* Asegura que estén por encima de todo */
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 15px 25px;
+  font-size: 20px;
+}
+
+/* Estilos generales para los botones, sin margin-top para escritorio */
+#prevBtn, #nextBtn {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.2);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 16px;
+  z-index: 101;
+}
+
+#prevBtn {
+  left: 10px;
+}
+
+#nextBtn {
+  right: 10px;
+}
+
+/* Media query para aplicar estilos específicos en dispositivos móviles */
+@media (max-width: 768px) {
+  #prevBtn, #nextBtn {
+    margin-top: 250px; /* Aplica un margen superior solo en dispositivos móviles */
+  }
+  #portada {
+    font-family: 'Lora', serif;
+
+  }
+  
+  
+}
+
+
+/* Estilos del footer */
+footer {
+  background-color: #cc985e; /* Verde oscuro */
+  color: white;
+  text-align: center;
+  padding: 0px;
+  position: fixed;
+  width: 100%;
+  z-index: 50;
+}
+
