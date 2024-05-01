@@ -1,0 +1,76 @@
+/* Estilos generales */
+body, html {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background: #e9f5f1;
+  color: #333;
+}
+
+header {
+  background-color: #4CAF50;
+  color: white;
+  padding: 1em;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+main {
+  padding-top: 60px; /* Ajuste por la cabecera fija */
+}
+
+.project {
+  margin: 20px;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.image-gallery img {
+  flex: 1 1 30%; /* Cada imagen toma un máximo de 30% del espacio disponible */
+  margin: 5px;
+  max-width: 100%; /* Asegura que la imagen sea responsive y no desborde su contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+}
+
+button {
+  display: block;
+  background: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 5px;
+  width: fit-content;
+  margin: 10px auto;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #2E8B57;
+  color: white;
+  text-align: center;
+  padding: 1em;
+  position: relative;
+  width: 100%;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .image-gallery img {
+    flex: 1 1 100%; /* Cada imagen ocupa el 100% del ancho en dispositivos móviles */
+  }
+}
+
+
